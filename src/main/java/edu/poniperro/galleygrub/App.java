@@ -131,7 +131,7 @@ public class App
         Ticket receipt = new Receipt(order);
         receipt.total();
         receipt.print();
-    }
+    
         /**
          * Eugene H. Krabs quiere obtener un margen
          * de beneficio extra y decide cargar
@@ -146,7 +146,7 @@ public class App
          * con el cargo extra 
          * pues eso lo haremos con otro componente. 
          */
-/*
+
         System.out.print("\n\t --- GALLEY GRUB ---  \n");
 
         patty = new Item("Krabby Patty", 1.25, "cheese");
@@ -159,13 +159,13 @@ public class App
         display(loaf);
         soda = new Item("Seafoam Soda", 1.00, "large");
         display(soda);
-
+    
         /**
          * Buble Fish sigue zampando
          * y realiza una comanda cargada
          * de extras.
          */
-/*
+
         order = new Order();
 
         order.addItem("Krabby Patty", 1.25, "cheese");
@@ -179,7 +179,7 @@ public class App
         // el precio de los extras en la salida por consola.
         order.display();
         
-
+    }
         /**
          * Define el importe a cargar por cada extra.
          * 

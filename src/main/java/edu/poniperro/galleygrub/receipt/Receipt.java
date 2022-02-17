@@ -5,6 +5,7 @@ import edu.poniperro.galleygrub.order.Comanda;
 public class Receipt implements Ticket {
     private Double total = 0d;
     private Comanda order;
+    // private Extra firstExtra;
 
     public Receipt(Comanda order) {
         this.order = order;
