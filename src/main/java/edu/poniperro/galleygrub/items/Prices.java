@@ -23,8 +23,11 @@ public class Prices {
     private static final double medium = 0.25;
     private static final double large = 0.50;
     private static final Map<String, Double> precios = new HashMap<String, Double>();
+    
 
-
+    public static double extraPrice(String extra) {
+        return precios.get(extra);
+    }
 
     public static void init_prices() {
         precios.put("cheese", cheese);
