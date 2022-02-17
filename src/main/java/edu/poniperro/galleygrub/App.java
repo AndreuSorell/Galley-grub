@@ -5,9 +5,9 @@ package edu.poniperro.galleygrub;
 //import edu.poniperro.galleygrub.extras.Regular;
 //import edu.poniperro.galleygrub.extras.SauceExtra;
 //import edu.poniperro.galleygrub.extras.SizeLargeExtra;
-//import edu.poniperro.galleygrub.items.Item;
+import edu.poniperro.galleygrub.items.Item;
 import edu.poniperro.galleygrub.items.Prices;
-//import edu.poniperro.galleygrub.items.Product;
+import edu.poniperro.galleygrub.items.Product;
 //import edu.poniperro.galleygrub.order.Comanda;
 //import edu.poniperro.galleygrub.order.Order;
 //import edu.poniperro.galleygrub.receipt.Receipt;
@@ -70,7 +70,7 @@ public class App
          * equals y hascode para comparar objetos
          * de tipo Item.
          */
-/*
+
         System.out.print("\n\t --- GALLEY GRUB ---  \n");
         
         Product patty = new Item("Krabby Patty", 1.25);
@@ -83,6 +83,7 @@ public class App
         display(loaf);
         Product soda = new Item("Seafoam Soda", 1.00);
         display(soda);
+    }
 
         /**
          * Bubble Bass llega al restaurante
@@ -220,8 +221,8 @@ public class App
         receiptExtra.total();
         receiptExtra.print();
     }
-
+*/
     public static void display(Product item) {
         System.out.print("\t" + item.toString() + "\n"); 
-    }*/
-}}
+    }
+}
