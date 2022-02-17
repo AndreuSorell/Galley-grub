@@ -33,8 +33,12 @@ public class Item implements Product {
 
     @Override
     public Boolean isRegular() {
-        //de moment
-        return true;
+        if (extra() == "") {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 
     @Override
