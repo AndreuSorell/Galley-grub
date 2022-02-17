@@ -36,14 +36,12 @@ public class Order implements Comanda {
 
     @Override
     public Double getTotal() {
-        // TODO Auto-generated method stub
-        return null;
+        return this.total;
     }
 
     @Override
     public void updateTotal(Double price) {
-        // TODO Auto-generated method stub
-        
+        this.total += price;
     }
 
     @Override
