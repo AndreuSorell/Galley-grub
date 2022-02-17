@@ -1,10 +1,6 @@
 package edu.poniperro.galleygrub.receipt;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import edu.poniperro.galleygrub.order.Comanda;
-import edu.poniperro.galleygrub.order.Order;
 
 public class Receipt implements Ticket {
     private Double total = 0d;
