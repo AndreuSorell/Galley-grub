@@ -46,7 +46,7 @@ public class Order implements Comanda {
 
     @Override
     public void display() {
-        System.out.println("\n\t--- ORDER ---");
+        System.out.println("\n\t --- ORDER ---");
         for (Item item : itemList()) {
             System.out.println("\t" + item.toString());
         }
