@@ -8,8 +8,8 @@ package edu.poniperro.galleygrub;
 import edu.poniperro.galleygrub.items.Item;
 import edu.poniperro.galleygrub.items.Prices;
 import edu.poniperro.galleygrub.items.Product;
-//import edu.poniperro.galleygrub.order.Comanda;
-//import edu.poniperro.galleygrub.order.Order;
+import edu.poniperro.galleygrub.order.Comanda;
+import edu.poniperro.galleygrub.order.Order;
 //import edu.poniperro.galleygrub.receipt.Receipt;
 //import edu.poniperro.galleygrub.receipt.Ticket; */
 
@@ -83,7 +83,7 @@ public class App
         display(loaf);
         Product soda = new Item("Seafoam Soda", 1.00);
         display(soda);
-    }
+
 
         /**
          * Bubble Bass llega al restaurante
@@ -111,7 +111,7 @@ public class App
          * te devuelve la misma referencia al objeto que has creado antes,
          * ahorrando asi memoria.
          */
-/*
+
         Comanda order = new Order();
 
         order.addItem("Krabby Patty", 1.25);
@@ -121,7 +121,7 @@ public class App
         order.addItem("Seafoam Soda", 1.00);
 
         order.display();
-
+    }
         /**
          * Squidward Tentacles genera el recibo,
          * la app calcula el importe total de la comanda

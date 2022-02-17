@@ -39,7 +39,6 @@ public class Item implements Product {
 
     @Override
     public String toString() {
-        // de moment
         return name()+ "...." + price() + "&";
     }
 
