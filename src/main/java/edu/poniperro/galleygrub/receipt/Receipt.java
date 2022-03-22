@@ -1,11 +1,12 @@
 package edu.poniperro.galleygrub.receipt;
 
+import edu.poniperro.galleygrub.extras.Extra;
 import edu.poniperro.galleygrub.order.Comanda;
 
 public class Receipt implements Ticket {
     private Double total = 0d;
     private Comanda order;
-    // private Extra firstExtra;
+    private Extra firstExtra;
 
     public Receipt(Comanda order) {
         this.order = order;
@@ -18,13 +19,26 @@ public class Receipt implements Ticket {
 
     @Override
     public Double total() {
+        this.sumExtrasCharge();
+        total = getOrder().getTotal();
         return this.total;
     }
 
     @Override
+    public void setChain(Extra extra) {
+        firstExtra = extra;
+    }
+
+    @Override
+    public Extra getChain() {
+        return firstExtra;
+    }
+    
+    @Override
     public void sumExtrasCharge() {
-        // TODO Auto-generated method stub
-        
+        if (getChain() != null) {
+            getChain().sumExtras(getOrder());
+        }
     }
 
     @Override
@@ -32,5 +46,5 @@ public class Receipt implements Ticket {
         getOrder().display();
         System.out.println("\tTOTAL--------> " + total() + "$");      
     }
-    
+
 }
