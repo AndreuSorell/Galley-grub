@@ -17,31 +17,30 @@ import java.util.Map;
          * del menu proporcionada.
          */
 
-public class Prices {
-    private static final double cheese = 0.25;
-    private static final double sauce = 0.50;
-    private static final double medium = 0.25;
-    private static final double large = 0.50;
-    private static final Map<String, Double> precios = new HashMap<String, Double>();
+public enum Prices {
+    CHEESE(0.25),
+    SAUCE(0.50),
+    MEDIUM(0.25),
+    LARGE(0.50);
     
+    private double extra;
+
+    private Prices(double extra) {
+        this.extra = extra;
+    }
 
     public static double extraPrice(String extra) {
-        return precios.get(extra);
+        return Prices.valueOf(extra.toUpperCase()).extra;
     }
-
-    public static void init_prices() {
-        precios.put("cheese", cheese);
-        precios.put("sauce", sauce);
-        precios.put("medium", medium);
-        precios.put("large", large);
-    }
-
 
 
     public static void display() {
-        for (String key : precios.keySet()) {
-            System.out.println("\t" + key + " = " + precios.get(key));
+        for (Prices key : Prices.values()) {
+            System.out.println("\t" + key.name() + " = " + key.extra);
         }
+    }
+
+    public static void init_prices() {
     }
     
 }
